@@ -1,0 +1,88 @@
+.body {
+    box-sizing: border-box;
+    display: flex;
+}
+
+.HamNCheese, .pbj {
+    background-color: azure;
+    display: flex;
+ 
+}
+
+.HM, .PBJ {
+    background-color: rgb(84, 150, 150);
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    margin: 10px 25px;
+}
+
+
+.HamNCheese {
+    margin-top: 50px;
+}
+
+
+.Board {
+    background-color: rgb(84, 150, 150);
+    width: 120px;
+    height: 60px;
+    margin-top: 10px;
+    
+}
+
+.OrderTicket {
+    background-color: rgb(119, 147, 197); 
+    height: 50px;
+    display: flex;
+    
+}
+
+.Bill {
+    background-color: rgb(64, 126, 64);
+    width: 96px;
+    height: 96px;
+    justify-items: center;
+    
+}
+
+.OT {
+    background-color: rgb(129, 180, 197);
+    width: 100px;
+    height: 50px;
+    margin: 0 100px;
+}
+
+.Cash {
+    background-color: darkslategray;
+    height: 50px;
+    width: 100px;
+    margin-top: 20px;
+}
+
+.HMSandwich {
+    height: 40px;
+    width: 40px;
+    background-color: orange;
+}
+
+.PBJSandwich {
+    height: 40px;
+    width: 40px;
+    background-color: red;
+}
+
+.gameTime {
+    height: 40px;
+    width: 40px;
+    background-color: yellowgreen;
+    margin-top:10px;
+    margin-left: 100px;
+}
+
+
+.shopClosed {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(223, 208, 208);
+}
