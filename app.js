@@ -128,11 +128,11 @@ const makeSandwich = () => {
     
 }
 
-const packSandwich = () => {
-            const found = list.find(element => element === )
-                 console.log(found)
+// const packSandwich = () => {
+//             const found = list.find(element => element === )
+//                  console.log(found)
    
-}
+// }
 
 
    
@@ -253,7 +253,7 @@ $div4()
 
 
 makeSandwich()
-packSandwich()
+//packSandwich()
 $('.OrderTicket').on('click',giveOrder)
 $('.Bill').on('click',collectMoney)
 
