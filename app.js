@@ -39,6 +39,9 @@ const $div12 = $('<div>').attr('id','gameTime').addClass('gameTime')
 
 const $div13 = $('<div>').attr('id', 'shopClosed').addClass('shopClosed').text('Shop Closed').hide()
  
+const $div14 = $('<div>').attr('id', 'HamIMG').addClass('HamIMG').text('HM').hide()
+
+const $div15 = $('<div>').attr('id', 'pbjIMG').addClass('pbjIMG').text('PBJ').hide()
 
 
 const computer = {
@@ -68,81 +71,97 @@ const computerChoice = () => {
     $('.OT').text(computer.order)
 }
 
-
-list = []
+let list = []
 const makeSandwich = () => {
     computerChoice()
- 
+    
     if(computer.order === menu[0]) {
- 
             $('.HM').on('click', (event)=>{  
-                //$(event.currentTarget).clone().appendTo($('.prepDone'))
-                 list.push(event.currentTarget)
+                const $target = $(event.target) 
+                list.push($target.text())
                  console.log(list)
-                 if (list === []) {
+                 if (list.length === 3 && list[0] === a[0] && list[1] === a[1] && list[2] === a[2]) {
                      $('.Board').on('click', ()=> {
-                        $('.HM').clone().appendTo($('.prepDone'))
-                     })
-                    
-                }
+                        $('.HamIMG').show()
+            
+                     }) 
+                     } 
+
             })
-        
-
-        
-        //     $('.brioche').on('click', (event)=>{  
-        //         //$(event.currentTarget).clone().appendTo($('.prepDone'))
-        //          list.push(event.currentTarget)
-        //          console.log(list)
-        //              })
-        
-        
-        // $('.ham').on('click', (event)=>{  
-        //         $(event.currentTarget).clone().appendTo($('.prepDone'))
-        //         list.push(event.currentTarget)
-        //         console.log(list)
-        //     })
-        
-        //     $('.gouda').on('click', (event)=>{  
-        //         $(event.currentTarget).clone().appendTo($('.prepDone'))
-        //         list.push(event.currentTarget)
-        //         console.log(list)
-                
-            //})
-
-
-
-
-
-
+         
+ 
+    }
 
    
-    
-    }
-
     if (computer.order === menu[1]) {
         $('.PBJ').on('click', (event)=>{
-            $(event.currentTarget).clone().appendTo($('.prepDone'))
+            const $target1 = $(event.target)
+            list.push($target1.text())
+                 console.log(list)
+                 if (list.length === 3 &&  list[0] === b[0] && list[1] === b[1] && list[2]===b[2] ) {
+                     $('.Board').on('click', ()=> {
+                        $('.pbjIMG').show()
+                     }) 
+                     } 
+        
         })
+   
     }
-
+    
+    
     
 }
 
-// const packSandwich = () => {
-//             const found = list.find(element => element === )
-//                  console.log(found)
-   
-// }
 
 
-   
+const packSandwich = () => {
+}
 
-const giveOrder = () => {
-        sandwichOrder()
-        $('.prepDone').empty()
-        $('.Bill').show()
+
+// let result =
+//   (ingredients.HamNCheese).every(function (element) {
+//     return list.includes(element);
+//   });
+
+
+const a = ingredients.HamNCheese
+const b = ingredients.PBJ
+// let result =
+//   (a).every(function (i) {
+//     return list.includes(i);
+//     });
         
+//  const compareH = () => {
+//     list[0] === a[0] && list[1] === a[1] && list[2] === a[2]  
+//  }
 
+
+//  const compareP = () => {
+//     list[0] === b[0] && list[1] === b[1] && list[2]===b[2]
+//  }
+
+
+ const emptylist = () => {
+    list = []
+    console.log(list)
+
+}
+  
+const giveOrder = () => {
+        //$('.prepDone').empty() 
+        emptylist()
+        $('.HamIMG').hide()
+        $('.pbjIMG').hide()
+    }
+    
+
+
+const completeOrder = () => {
+   
+        sandwichOrder()
+        $('.Bill').show()
+    
+        
     
 }
 
@@ -155,11 +174,12 @@ const collectMoney = () => {
 }
 
 const sandwichOrder = () => {
-    
-    if(computer.order === menu[0])  {
+
+        if(computer.order === menu[0])  {
             $('.HMSandwich').show()
-        
     }
+    
+    
 
     if(computer.order === menu[1]) {
         $('.PBJSandwich').show()
@@ -183,6 +203,7 @@ const earnCash = () => {
     $div8.text(cash)
     
     makeSandwich()
+   
     
    
 }
@@ -243,7 +264,8 @@ $div2.append($div6)
 $div5.append($div9)
 $div5.append($div10)
 $div5.append($div11)
-
+$div2.append($div14)
+$div2.append($div15)
 
 
 
@@ -253,8 +275,10 @@ $div4()
 
 
 makeSandwich()
-//packSandwich()
-$('.OrderTicket').on('click',giveOrder)
+
+$('.OT').on('click',giveOrder)
+emptylist()
+$('.OrderTicket').on('click', completeOrder)
 $('.Bill').on('click',collectMoney)
 
 
@@ -262,6 +286,13 @@ $('.Bill').on('click',collectMoney)
 //startGame()
 
 //start = setInterval(gameTime, 1000)
+
+
+//console.log(console.log(list) === console.log(ingredients.HamNCheese))
+
+
+
+//console.log(result); // true
 
 
 }
