@@ -1,60 +1,107 @@
-.body {
+body {
     box-sizing: border-box;
-    display: flex;
+     
     
 }
 
-.HamNCheese, .pbj {
-    background-color: azure;
-    display: flex;
- 
-}
 
-.HM, .PBJ, .OC, .BAG, .collectCash, .Bags, .coffee, .tea, .drinkOC, .sandOC {
+
+ .PBJ, .OC, .collectCash, .Bags, .coffee, .tea, .drinkOC, .sandOC {
     background-color: rgb(84, 150, 150);
     width: 48px;
     height: 48px;
     text-align: center;
     margin: 10px 25px;
+    border-radius: 12px;
+}
+
+.HM, .BAG {
+    background-color: #ffc9c9;
+    width: 70px;
+    height: 48px;
+    text-align: center;
+    margin: 10px 25px;
+    border-radius: 12px;
+}
+
+.PBJ {
+    background-color: #fff5f5;
+    width: 100px;
+    height: 48px;
+    text-align: center;
+    margin: 10px 25px;
+    border-radius: 12px;
+
 }
 
 
-.HMC {
-    background-color: rgb(84, 150, 150);
-    width: 50px;
-    height: 50px
+.coffee {
+    background-color: #fff5f5;
+    width: 80px;
+    height: 48px;
+    text-align: center;
+    margin: 10px 25px;
+    border-radius: 12px;
 }
 
 
-.prepBoard {
-    background-color: rgb(84, 150, 150);
-    width: 120px;
-    height: 60px;
+.tea {
+    background-color: #ffc9c9;
+    width: 70px;
+    height: 48px;
+    text-align: center;
+    margin: 10px 25px;
+    border-radius: 12px;
+}
+
+.bin {
+    background-color: #ffa8a8;
+    width: 70px;
+    height: 48px;
+    text-align: center;
+    margin: 10px 25px;
+    border-radius: 12px;
+}
+
+.prepB, .prepD {
+    background-color: ivory;
+    text-align: center;
+    height: 80px;
+    line-height: 80px;
     margin-top: 10px;
+    margin-bottom: 5px;
+
     
 }
+
+
+
+.OC, .drinkOC, .sandOC {
+    background-color: #d0ebff;
+    width: 100px;
+    height: 60px;
+    text-align: center;
+    margin: 10px 25px;
+    border-radius: 12px;
+}
+
+
+
 
 .OrderTicket {
-    background-color: rgb(119, 147, 197); 
-    height: 50px;
-    display: flex;
-    
+    display: flex;      
 }
 
-.Bill {
-    background-color: rgb(64, 126, 64);
-    width: 96px;
-    height: 96px;
-    justify-items: center;
-    
-}
 
-.OT {
-    background-color: rgb(129, 180, 197);
+
+.OT, .DO {
+    background-color: #d0ebff;
     width: 200px;
-    height: 50px;
+    height: 80px;
     margin: 0 100px;
     text-align: center;
+    line-height: 80px;
+    border-radius: 12px;
 }
 
 .Cash {
@@ -64,35 +111,134 @@
     margin-top: 20px;
 }
 
-.HMSandwich {
-    height: 40px;
-    width: 40px;
-    background-color: orange;
+
+
+.HMRecipe {
+    display: flex;
+    background-color: #fff5f5;
+    margin-bottom: 10px;
+    
 }
 
-.PBJSandwich {
-    height: 40px;
-    width: 40px;
-    background-color: red;
+.HamSando {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    
+    
 }
+
+.PBJRecipe {
+    display: flex;
+    background-color: #ffe3e3;
+    margin-bottom: 10px;
+}
+
+.PBJSando {
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+
+.BaguetteRecipe {
+    display: flex;
+    background-color: #fff5f5;
+    margin-bottom: 10px;
+   
+}
+
+.BaguetteSando {
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.CappucinoRecipe {
+    display: flex;
+    background-color: #ffe8cc;
+    margin-bottom: 10px;
+    
+}
+
+.Cappucino {
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.MatchaRecipe {
+    display: flex;
+    background-color: #fff4e6;
+    margin-bottom: 10px;
+}
+
+
+.MatchaLatte {
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+
 
 .gameTime {
-    height: 40px;
-    width: 40px;
-    background-color: yellowgreen;
-    margin-top:10px;
-    margin-left: 100px;
+    background-color:#fff9db;
+    width: 70px;
+    height: 48px;
+    text-align: center;
+    margin: 10px 25px;
+    border-radius: 12px;
+    float: right;
 }
 
+.shopCl {
+    display: flex;  
+    justify-content: center;
+}
 
 .shopClosed {
     height: 100px;
-    width: 100px;
-    background-color: rgb(223, 208, 208);
+    width: 120px;
+    background-color: #ffa8a8;
+    justify-content: center;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 20px;
+    
+    
 }
 
 
 .drinkOC, .sandOC {
- margin-left: 100px;
+ margin-left: 300px;
 
+}
+
+.money{
+    display: flex;
+    background-color: #ebfbee;
+    width: 200px;
+    margin-top: 20px;
+    text-align: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.collectCash{
+    background-color: #ebfbee;
+    width: 70px;
+    height: 48px;
+    text-align: center;
+    margin: 10px 25px;
+    border-radius: 12px;
+}
+
+.prepDone {
+    display: flex;
+    margin-bottom: 20px;
 }

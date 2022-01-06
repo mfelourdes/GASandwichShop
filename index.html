@@ -14,54 +14,117 @@
     <script src="app.js" charset="utf-8"></script>
     <script src="app1.js" charset="utf-8"></script>
   </head>
+
   <body>
-  <h1 id = "OrderTicket" class = "OrderTicket">Curent order:<span class="OT"></span> <span id="DrinkOrder" class = "DO">ff</span></h1>
+
+  <button class = "gameTime"></button>
+  <div class=shopCl>
+    <div class = "shopClosed" style="display: none" >
+      <h2>SHOP CLOSED</h2>
+    </div>  
+  </div>
+<span class = orderHeader>
+  <h1 id = "OrderTicket" class = "OrderTicket">
+    Order:<span class="OT"></span> 
+    <span id="DrinkOrder" class = "DO"></span></h1>
+</span>
+ 
+<div class = HMRecipe>
+<div class = HamSando>HamNCheese
+  <img src = "Brioche.png"/>
+  <button class="HM brioche">brioche</button>
+  <img src = "Ham.png">
+  <button class="HM ham">ham</button>
+  <img src="Gouda.png"/>
+  <button class="HM gouda">gouda</button>
+</div>
+</div>  
+
+
+<div class = PBJRecipe>
+  <div class = PBJSando> PBJ
+    <img src = "Sourdough.png"/>
+    <button class="PBJ sourdough">sourdough</button>
+    <img src = "Peanut.png"/>
+    <button class="PBJ peanutbutter">peanut butter</button>
+    <img src = "Blueberry.png"/>
+    <button class="PBJ blueberry">blueberry jam</button>
+  </div>
+</div>
+
+ 
+<div class = BaguetteRecipe>
+  <div class = "BaguetteSando">Baguette
+    <img src = "Baguette.png"/>
+    <button class="BAG baguette">baguette</button>
+    <img src = "Butter.png"/>
+    <button class="BAG butter">butter</button>
+    <img src = "Salt.png"/>
+    <button class="BAG salt">sea salt</button>
+   </div>
+</div>
+ 
+
+  <div class = CappucinoRecipe>
+    <div class = Cappucino>Cappuccino
+      <img src = "Coffee.png">
+      <button class="coffee">espresso</button>
+      <img src = "Milk.png"/>
+      <button class="coffee">milk</button>
+      <img src = "Foam.png"/>
+      <button class="coffee">foam</button>
+    </div>
+  </div>
+
+
+  
+
+<div class = MatchaRecipe>
+  
+  <div class = MatchaLatte>Matcha Latte
+    <img src = "Tea.png">
+    <button class="tea">matcha</button>
+    <img src = "Soy.png"/>
+    <button class="tea">soy milk</button>
+  </div>
+</div>
+
   
 
 
+<button class = bin>bin</button>
 
-  <button class="HM brioche btn">brioche</button>
-  <button class="HM ham btn">ham</button>
-  <button class="HM gouda btn">gouda</button>
-
-  <button class="PBJ sourdough">sourdough</button>
-  <button class="PBJ peanutbutter">peanut butter</button>
-  <button class="PBJ blueberry">blueberry jam</button>
- 
-  <button class="BAG baguette">baguette</button>
-  <button class="BAG butter">butter</button>
-  <button class="BAG salt">sea salt</button>
-
-
-  <button class="coffee">espresso</button>
-  <button class="coffee">milk</button>
-  <button class="coffee">foam</button>
-
-
-  <button class="tea">matcha</button>
-  <button class="tea">soy milk</button>
-
-
-<button class = 'bin'>bin</button>
-
+<div class= prepB>
   <h2>Prep Board:<span class = "prepBoard"></span></h2>
+</div>
+  
+<div class=prepD>
   <h2>Prep Done:<span class = "prepDone"></span></h2>
+</div>
+ 
 
 
 
-  <span id = 'orderComplete'>
+<div id = orderPrepDone>
+  <button class="drinkOC">Drink ready</button>
+  <button class="sandOC">Sandwich ready</button>
+
+</div>
+
+  <div id = 'orderComplete'>
     <button class="OC">complete order</button> 
     <button class="collectCash" style="display: None">Cash</button>
-  </span>
-
-  <span id = orderPrepDone>
-    <button class="drinkOC">Drink ready</button>
-    <button class="sandOC">Sandwich ready</button>
-
-  </span>
+  </div>
 
   
-  <h2>Earnings:<span class = 'Earnings'></span></h2>
+
+  <div class="money">
+    <h2>Earnings:<span class = 'Earnings'></span></h2>
+  </div>
+
+
+  
+  
 
   </body>
 </html>

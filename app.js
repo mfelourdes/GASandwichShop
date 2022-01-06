@@ -60,6 +60,7 @@ const makeHMC = (event) => {
       list[2] === a[2]
     ) {
       $(".prepDone").text("order done");
+      $('.sandOC').prop('disabled', false)
     }
   };
   
@@ -75,6 +76,7 @@ const makeHMC = (event) => {
       list[2] === b[2]
     ) {
       $(".prepDone").text("order done");
+      $('.sandOC').prop('disabled', false)
     }
   };
   
@@ -90,6 +92,7 @@ const makeHMC = (event) => {
       list[2] === c[2]
     ) {
       $(".prepDone").text("order done");
+      $('.sandOC').prop('disabled', false)
     }
   
   }
@@ -107,6 +110,8 @@ const makeHMC = (event) => {
       list[2] === d[2]
     ) {
       $(".prepDone").text("order done");
+      $('.drinkOC').prop('disabled', false)
+     
     }
 
 }
@@ -119,10 +124,11 @@ const makeMatcha = (event) => {
     console.log(list);
     if (
       list.length === 2 &&
-      list[0] === d[0] &&
-      list[1] === d[1] 
+      list[0] === e[0] &&
+      list[1] === e[1] 
     ) {
       $(".prepDone").text("order done");
+      $('.drinkOC').prop('disabled', false)
     }
 
 }
@@ -152,6 +158,8 @@ const collectMoney = () => {
   $(".BAGS").hide();
   $(".COFFEE").hide();
   $(".TEA").hide();
+  $('.sandOC').prop('disabled', true)
+  $('.drinkOC').prop('disabled', true)
 };
 
 const sandwichOrder = () => {
@@ -185,6 +193,7 @@ const drinkPrep = () => {
 const sandOrder = () => {
     sandwichOrder()
     $(".prepBoard").empty();
+    $(".prepDone").empty();
      list = [];
     
 }
@@ -192,6 +201,7 @@ const sandOrder = () => {
 const drinkOrder = () => {
     drinkPrep()
     $(".prepBoard").empty();
+    $(".prepDone").empty();
     list = [];
 }
 
@@ -225,13 +235,17 @@ const earnCash = () => {
   playerChoice();
 };
 
+
+
+
+
 //const myInterval = setInterval(earnCash, 10000)
 
 // const myStop = () => {
 //     clearInterval(myInterval)
 // }
 const counter = 0;
-let time = 60;
+let time = 30;
 
 const gameTime = () => {
   const minutes = Math.floor(time / 60);
@@ -261,20 +275,16 @@ const gameTime = () => {
 
 
 
-const $button = $("<button>").addClass("HMC").hide().text("HMC");
-const $button1 = $("<button>").addClass("PBJS").hide().text("PBJS");
-const $button2 = $("<button>").addClass("BAGS").hide().text("BAGS");
-const $button3 = $("<button>").addClass("COFFEE").hide().text("CAPUCCINO");
-const $button4 = $("<button>").addClass("TEA").hide().text("TEA");
+const $img= $("<img>").attr("src", "HMC.png").addClass("HMC").hide();
+const $img1 = $("<img>").attr("src", "PBJ.png").addClass("PBJS").hide();
+const $img2 = $("<img>").attr("src", "BSC.png").addClass("BAGS").hide();
+const $img3 = $("<img>").attr("src", "Capuccino.png").addClass("COFFEE").hide();
+const $img4 = $("<img>").attr("src", "Matcha.png").addClass("TEA").hide();
 
 
-const unclick = (event) => {
-    $target = $(event.target)
 
-}
 
-const bin = (event) => {
-    $target = $(event.target)
+const bin = () => {
     list =[]
     $('.prepBoard').empty()
 
@@ -283,11 +293,11 @@ const bin = (event) => {
 
 
 const main = () => {
-  $("#orderComplete").append($button);
-  $("#orderComplete").append($button1);
-  $("#orderComplete").append($button2);
-  $("#orderComplete").append($button3);
-  $("#orderComplete").append($button4);
+  $("#orderComplete").append($img);
+  $("#orderComplete").append($img1);
+  $("#orderComplete").append($img2);
+  $("#orderComplete").append($img3);
+  $("#orderComplete").append($img4);
 
   computerChoice();
   playerChoice();
@@ -306,15 +316,15 @@ const main = () => {
   $(".drinkOC").on("click", drinkOrder)
   $(".sandOC").on("click",sandOrder)
 
-  $('.btn').on("click", unclick)
+  //$('.btn').on("click", unclick)
   $('.bin').on("click", bin)
 
-
-
+  $('.drinkOC').prop('disabled', true)
+  $('.sandOC').prop('disabled', true)
 
   //startGame()
 
-  //start = setInterval(gameTime, 1000)
+  start = setInterval(gameTime, 1000)
 
   //console.log(console.log(list) === console.log(ingredients.HamNCheese))
 
