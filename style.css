@@ -1,6 +1,7 @@
 .body {
     box-sizing: border-box;
     display: flex;
+    
 }
 
 .HamNCheese, .pbj {
@@ -9,7 +10,7 @@
  
 }
 
-.HM, .PBJ {
+.HM, .PBJ, .OC, .BAG, .collectCash, .Bags, .coffee, .tea, .drinkOC, .sandOC {
     background-color: rgb(84, 150, 150);
     width: 48px;
     height: 48px;
@@ -18,12 +19,14 @@
 }
 
 
-.HamNCheese {
-    margin-top: 50px;
+.HMC {
+    background-color: rgb(84, 150, 150);
+    width: 50px;
+    height: 50px
 }
 
 
-.Board {
+.prepBoard {
     background-color: rgb(84, 150, 150);
     width: 120px;
     height: 60px;
@@ -48,9 +51,10 @@
 
 .OT {
     background-color: rgb(129, 180, 197);
-    width: 100px;
+    width: 200px;
     height: 50px;
     margin: 0 100px;
+    text-align: center;
 }
 
 .Cash {
@@ -85,4 +89,10 @@
     height: 100px;
     width: 100px;
     background-color: rgb(223, 208, 208);
+}
+
+
+.drinkOC, .sandOC {
+ margin-left: 100px;
+
 }
