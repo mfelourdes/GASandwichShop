@@ -331,7 +331,7 @@ const main = () => {
   })
   //startGame()
 
-  //start = setInterval(gameTime, 1000)
+  start = setInterval(gameTime, 1000)
 
   //console.log(console.log(list) === console.log(ingredients.HamNCheese))
 

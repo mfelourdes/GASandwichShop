@@ -244,22 +244,23 @@ body {
 }
 
 .well {
-    display: flex;
-    height: 120px;
-    width: 120px;
+    height: 200px;
+    width: 400px;
     background-color: #ffa8a8;
     line-height: 120px;
     justify-content: center;
     border-radius: 12px;
     text-align: center;
     margin: auto;
-    margin-top: 160px;
+    margin-top: px;
+    font-size: 80px;
     
 }
 
 .bg {
+    display: flex;
     margin: auto;
-    height: 500px;
+    height: 850px;
     background-image: url('SandBG.png');
     
 }
