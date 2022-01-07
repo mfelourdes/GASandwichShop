@@ -258,7 +258,8 @@ const gameTime = () => {
 
   if (time === 0) {
     clearInterval(start);
-    $(".shopClosed").show();
+    $(".shopClosed").hide();
+    $(".sc").show()
   }
 };
 
@@ -322,9 +323,15 @@ const main = () => {
   $('.drinkOC').prop('disabled', true)
   $('.sandOC').prop('disabled', true)
 
+
+  $(".well").on("click", ()=> {
+      $('.welcome').show()
+      $(".well").hide()
+      $('.bg').hide()
+  })
   //startGame()
 
-  start = setInterval(gameTime, 1000)
+  //start = setInterval(gameTime, 1000)
 
   //console.log(console.log(list) === console.log(ingredients.HamNCheese))
 
